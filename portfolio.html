@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ben Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=Instrument+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="wallpaper"></div>
+
+<!-- MAIN PROFILE WINDOW -->
+<div class="window main-window draggable" id="window1">
+    <div class="titlebar">
+        <div class="dots">
+            <span></span><span></span><span></span>
+        </div>
+        <p>portfolio.png</p>
+    </div>
+
+    <div class="main-content">
+
+        <div class="name-box">
+            <h1>Ben Parker</h1>
+            <div class="list-line"><span>01</span><hr><p>Visual Designer</p></div>
+            <div class="list-line"><span>02</span><hr><p>Frontend Dev</p></div>
+            <div class="list-line"><span>03</span><hr><p>Creative Editor</p></div>
+            <div class="list-line"><span>04</span><hr><p>Portfolio Owner</p></div>
+            <div class="list-line"><span>05</span><hr><p>Old Web Lover</p></div>
+        </div>
+
+        <div class="shape-box">
+            <svg viewBox="0 0 200 200">
+                <path d="M100,20 
+                C140,20 170,50 170,90
+                C170,130 140,160 100,160
+                C70,160 50,140 50,110
+                C50,80 70,60 95,60
+                C115,60 130,75 130,95
+                C130,112 118,125 100,125
+                C85,125 78,115 78,102"
+                fill="none" stroke="black" stroke-width="3"/>
+            </svg>
+        </div>
+
+        <div class="portrait-box">
+            <img src="map.jpg" id="mainPortrait">
+        </div>
+
+        <div class="mini-shapes">
+            <div class="mini">
+                <img src="cig.jpg">
+            </div>
+
+            <div class="mini">
+                <img src="pict2.jpg">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- RECENTS WINDOW -->
+<div class="window folder-window draggable" id="window2">
+    <div class="titlebar">
+        <div class="dots">
+            <span></span><span></span><span></span>
+        </div>
+        <p>Recents</p>
+    </div>
+
+    <div class="folder-grid">
+        <div class="thumb" onclick="openViewer('assets/img/pic1.jpg')">
+            <img src="pic1.jpg">
+            <span>image01.jpg</span>
+        </div>
+
+        <div class="thumb" onclick="openViewer('assets/img/pic2.jpg')">
+            <img src="pic2.jpg">
+            <span>image02.jpg</span>
+        </div>
+    </div>
+</div>
+
+
+<!-- IMAGE VIEWER -->
+<div class="window viewer-window draggable" id="viewerWindow">
+    <div class="titlebar">
+        <div class="dots">
+            <span></span><span></span><span></span>
+        </div>
+        <p>image viewer</p>
+    </div>
+    <img src="hhyunjun.jpg" id="viewerImg">
+</div>
+
+
+<!-- MUSIC PLAYER -->
+<div class="window player-window draggable" id="window3">
+    <div class="titlebar">
+        <div class="dots">
+            <span></span><span></span><span></span>
+        </div>
+        <p>playlist.mp3</p>
+    </div>
+
+    <img src="hyunjunn.jpg" id="albumCover">
+
+    <audio id="bgMusic"></audio>
+
+    <div class="media-bar">
+        <div class="left-controls" onclick="playSong()">PLAY</div>
+        <div class="left-controls" onclick="pauseSong()">PAUSE</div>
+        <div class="right-controls" onclick="nextSong()">NEXT ♫</div>
+    </div>
+
+    <div class="song-name" id="songTitle">song 1</div>
+</div>
+
+
+<!-- CONTACT -->
+<div class="window contact-window draggable" id="window4">
+    <div class="titlebar">
+        <div class="dots">
+            <span></span><span></span><span></span>
+        </div>
+        <p>contact.txt</p>
+    </div>
+
+    <div class="contact-content">
+        <p>Telegram @Hyeonjuon</p>
+        <p>Instagram : @hyunjwun</p>
+        <p>Email : benparker@mail.com</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
